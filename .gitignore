@@ -1,6 +1,7 @@
-# Ignorar backend y dependencias
+
+# Ignorar frontend y dependencias
+frontend/
 backend/
-node_modules/
 
 # Ignorar archivos comprimidos y grandes
 *.rar
