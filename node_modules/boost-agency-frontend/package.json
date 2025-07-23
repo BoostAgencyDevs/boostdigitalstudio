@@ -2,14 +2,13 @@
   "name": "boost-agency-frontend",
   "version": "0.0.0",
   "scripts": {
-  "ng": "ng",
-  "start": "ng serve",
-  "build": "ng build --configuration production",
-  "watch": "ng build --watch --configuration development",
-  "test": "ng test",
-  "lint": "ng lint",
-  "postinstall": "chmod +x ./node_modules/.bin/ng"
-},
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build --configuration production",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test",
+    "lint": "ng lint"
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "^17.0.0",
@@ -22,12 +21,12 @@
     "@angular/router": "^17.0.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
-    "zone.js": "~0.14.0"
+    "zone.js": "~0.14.0",
+    "@angular/cli": "^17.3.17"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^17.0.0",
     "@angular-eslint/builder": "20.1.1",
-    "@angular/cli": "^17.3.17",
     "@angular/compiler-cli": "^17.0.0",
     "@eslint/js": "^9.29.0",
     "@types/jasmine": "~5.1.0",
