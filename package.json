@@ -1,0 +1,22 @@
+{
+  "name": "boost-agency",
+  "version": "1.0.0",
+  "description": "BOOST AGENCY website with Angular frontend and Node.js backend",
+  "scripts": {
+    "start": "cd backend && npm start",
+    "start:frontend": "cd frontend && npm start",
+    "install:all": "npm install && cd frontend && npm install && cd ../backend && npm install",
+    "build": "cd frontend && npm run build"
+  },
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "devDependencies": {
+    "@angular/cli": "^17.3.17",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.17"
+  }
+} 
