@@ -1,24 +1,31 @@
-# ✅ Archivo corregido para despliegue en Netlify
-# @fileoverview Configuración de build y deploy para Boost Agency (Angular)
-# @author 
-# Boost Agency Development Team
+# =============================================================================
+#      Archivo de Configuración para Despliegue en Netlify
+# =============================================================================
+# Coloca este archivo en la raíz de tu repositorio (al mismo nivel que la
+# carpeta `frontend` y el `README.md`).
 
 [build]
-  base = "frontend"
-  publish = "dist/frontend"  # ← CORREGIDO: sin /browser
-  command = "npm install --unsafe-perm=true && npm run build"
+  # Directorio base: Netlify ejecutará los comandos desde esta carpeta.
+
+  # Comando de construcción: Instala dependencias y compila el proyecto Angular desde la raíz.
+  command = "npm --prefix frontend install && npm --prefix frontend run build"
+
+  # Directorio de publicación: La carpeta con los archivos compilados.
+  # Esta ruta es relativa a la raíz del repositorio.
+  publish = "frontend/dist/frontend"
 
 [build.environment]
-  NODE_VERSION = "20"
+  NODE_VERSION = "18"
 
+# Regla de redirección para que las rutas de Angular (SPA) funcionen.
+# Esto evita errores 404 al recargar la página en una ruta como /servicios.
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
 
-# (Opcional) Configuración para desarrollo local con Netlify CLI
+# (Opcional) Configuración para desarrollo local con Netlify CLI.
 [dev]
   command = "ng serve"
   port = 4200
-  publish = "dist/frontend"  # ← CORREGIDO aquí también
- 
+  publish = "dist/frontend"
